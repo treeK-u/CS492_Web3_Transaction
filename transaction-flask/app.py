@@ -19,12 +19,12 @@ conn = Web3(HTTPProvider('http://54.91.173.221:7545'))
 network_id = '1685279260059'
 
 # Load Smart Contract - Market
-with open('../transaction-truffle/build/contracts/Market.json') as f:
+with open('/home/ubuntu//transaction-truffle/build/contracts/Market.json') as f:
     result = json.loads(f.read())
 contract = conn.eth.contract(abi=result['abi'], address=result['networks'][network_id]['address'])
 
 # Load Smart Contract - Market
-with open('../transaction-truffle/build/contracts/UserHistory.json') as f:
+with open('/home/ubuntu/transaction-truffle/build/contracts/UserHistory.json') as f:
     result = json.loads(f.read())
 history_contract = conn.eth.contract(abi=result['abi'], address=result['networks'][network_id]['address'])
 
