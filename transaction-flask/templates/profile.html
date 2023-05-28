@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+
+    <!-- Common CDN  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Datatable CDN -->
+    <link href="https://cdn.datatables.net/v/bs4/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <script src="https://cdn.datatables.net/v/bs4/dt-1.13.4/datatables.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</head>
+{% include 'common/top_navbar.html' %}
+<div class="container-fluid">
+    <div class="row mt-4 justify-content-center">
+        <div class="col-10">
+            <h3>Selling Items</h3>
+            <hr/>
+        </div>
+        <div class="col-10">
+            <table id="sellingListTable" class="display" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Imgae</th>
+                    <th>Category</th>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Is Sold</th>
+                    <th>Seller Address</th>
+                    <th>Url</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-4 justify-content-center">
+        <div class="col-10">
+            <h3>Contract History</h3>
+            <hr/>
+        </div>
+        <div class="col-10">
+            <table id="contractHistoryTable" class="display" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Nonce</th>
+                    <th>Type</th>
+                    <th>Block Hash</th>
+                    <th>Block Number</th>
+                    <th>Transaction Index</th>
+                    <th>From</th>
+                    <th>Gas</th>
+                    <th>Gas Price</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-4 justify-content-center">
+        <div class="col-10">
+            <h3>Transaction History</h3>
+            <hr/>
+        </div>
+        <div class="col-10">
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                <tr>
+                    <!--                    <th>Hash</th>-->
+                    <!--                    <th>Type</th>-->
+                    <th>Nonce</th>
+                    <th>Block Hash</th>
+                    <th>Block Number</th>
+                    <th>Transaction Index</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Value</th>
+                    <!--                    <th>Value</th>-->
+                    <th>Gas</th>
+                    <th>Gas Price</th>
+                    <!--                    <th>Input</th>-->
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <!--                    <th>Hash</th>-->
+                    <!--                    <th>Type</th>-->
+                    <th>Nonce</th>
+                    <th>Block Hash</th>
+                    <th>Block Number</th>
+                    <th>Transaction Index</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Value</th>
+                    <!--                    <th>Value</th>-->
+                    <th>Gas</th>
+                    <th>Gas Price</th>
+                    <!--                    <th>Input</th>-->
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryStringAddress = urlParams.get('address');
+
+        if(queryStringAddress) {
+            loadProfileInfo(queryStringAddress);
+        } else {
+            getAccount().then((address) => {
+                loadProfileInfo(address);
+            });
+        }
+    })
+    function loadProfileInfo(address) {
+        $.ajax({
+            url: `/get_commodity_list?address=${address}`,
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                $('#sellingListTable').DataTable({
+                    data: data,
+                    scrollX: true
+                });
+            }
+        });
+
+        $.ajax({
+            url: `/get_contract_history?address=${address}`,
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                $('#contractHistoryTable').DataTable({
+                    data: data,
+                    columns: [
+                        {data: 'nonce'},
+                        {data: 'type'},
+                        {data: 'blockHash'},
+                        {data: 'blockNumber'},
+                        {data: 'transactionIndex'},
+                        {data: 'from'},
+                        {data: 'gas'},
+                        {data: 'gasPrice'},
+                    ],
+                    scrollX: true,
+                });
+            }
+        });
+
+        $.ajax({
+            url: `/get_transaction_history?address=${address}`,
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                console.log(data);
+                $('#example').DataTable({
+                    data: data,
+                    columns: [
+                        // {data: 'hash'},
+                        // {data: 'type'},
+                        {data: 'nonce'},
+                        {data: 'blockHash'},
+                        {data: 'blockNumber'},
+                        {data: 'transactionIndex'},
+                        {data: 'from'},
+                        {data: 'to'},
+                        {data: 'value'},
+                        {data: 'gas'},
+                        {data: 'gasPrice'},
+                        // {data: 'input'}
+                    ],
+                    scrollX: true,
+                });
+            }
+        });
+    }
+</script>
+<style>
+    .f32 .flag {
+        vertical-align: middle;
+        margin: -8px 0;
+    }
+
+    progress {
+        width: 100%;
+    }
+</style>
+</html>

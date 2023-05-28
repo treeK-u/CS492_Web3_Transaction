@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7/web3.js"></script>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% include 'common/top_navbar.html' %}
+<div class="container-fluid">
+    <div class="row mt-5 justify-content-center">
+        <div class="col-10">
+            <div class="row justify-content-center">
+                <div class="col-5 mx-2">
+                    <img src="" id="product-img" style="max-width: 100%; max-height: 100%"/>
+                </div>
+                <div class="col-5 mx-2">
+                    <div class="row mt-2 justify-content-center">
+                        <div class="col-10">
+                            <h5 id="product-name"> - </h5>
+                            <hr />
+                        </div>
+                        <div class="col-10">
+                            <span id="product-price">- ETH</span>
+                        </div>
+                        <div class="col-10 mt-2">
+                            <span id="product-description">- ETH</span>
+                        </div>
+                        <div class="col-10">
+                            <div class="row justify-content-end">
+                                <div class="col-3">
+                                    <button type="button" id="buy-product" class="btn btn-dark" style="width: 100%" disabled>구매하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        console.log(id);
+
+        $.ajax({
+            url: `/get_commodity?id=${id}`,
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                console.log(data);
+                if(Object.keys(data).length !== 0) {
+                    document.getElementById('product-img').src = data['imgPath'];
+                    document.getElementById('product-name').innerText = data['name'];
+                    document.getElementById('product-price').innerText = `${data['price']} ETH`;
+                    document.getElementById('product-description').innerText = data['description'];
+
+                    document.getElementById('buy-product').addEventListener('click', function (event) {
+                        sendETH(data['price'], data['sellerAddress']);
+                    })
+                    if (data['isSold']) {
+                        document.getElementById('buy-product').innerText = 'Sold Out';
+                    }
+                    document.getElementById('buy-product').disabled = data['isSold'];
+                } else {
+                    alert("정상적인 아이템이 아닙니다!");
+                    location.href = '/home';
+                }
+
+            }
+        });
+    })
+</script>
+</html>

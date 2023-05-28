@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% include 'common/top_navbar.html' %}
+<div class="container-fluid">
+    <div class="row mt-2 justify-content-center">
+        <div class="float col-md-9 col-lg-10 pt-3 px-4">
+            <div class="row mt-5">
+                <div class="col-xl-6 col-sm-6 col-12 justify-content-center">
+                    <div class="card" style="width: 50%; margin: 0 auto;">
+                        <img class="card-img-top" src="https://cdn2.thecatapi.com/images/5gv.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="danger">Buyer</h3>
+                            <footer class="blockquote-footer mb-3">구매자 계정</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-sm-6 col-12">
+                    <div class="card" style="width: 50%; margin: 0 auto;">
+                        <img class="card-img-top" src="https://cdn2.thecatapi.com/images/4pp.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="danger">Sellor</h3>
+                            <footer class="blockquote-footer mb-3">판매자 계정</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

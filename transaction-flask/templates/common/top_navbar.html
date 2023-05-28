@@ -1,0 +1,39 @@
+<script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand ml-5" href="/">Transaction</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ml-3">
+      <li class="nav-item dropdown" id="market">
+        <a class="nav-link" href="/home"> Market </a>
+      </li>
+      <li class="nav-item dropdown ml-3" id="my_page">
+        <a class="nav-link" href="/profile"> My Page </a>
+      </li>
+      <li class="nav-item dropdown ml-3" id="user_history">
+        <a class="nav-link" href="/user_login_history"> User Login History </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script>
+  $(document).ready(function() {
+    getAccount().then((address) => {
+      const sid = document.cookie
+              .split('; ')
+              .find(row => row.startsWith('w3_sid'))
+              .split('=')[1];
+      console.log(sid);
+
+      $.ajax({
+        url: `/update_history?sid=${sid}&address=${address}`,
+        type: "get",
+        contentType: "application/json",
+        success: function (data) {}
+      });
+    })
+  })
+</script>

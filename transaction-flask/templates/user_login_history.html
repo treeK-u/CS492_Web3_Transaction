@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+
+    <!-- Common CDN  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Datatable CDN -->
+    <link href="https://cdn.datatables.net/v/bs4/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <script src="https://cdn.datatables.net/v/bs4/dt-1.13.4/datatables.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</head>
+{% include 'common/top_navbar.html' %}
+<div class="container-fluid">
+    <div class="row mt-4 justify-content-center">
+        <div class="col-10">
+            <h3>Login History</h3>
+            <hr/>
+        </div>
+        <div class="col-10">
+            <table id="userLoginHistoryTable" class="display" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Session Id</th>
+                    <th>User Address</th>
+                    <th>Visit Count</th>
+                    <th>First Login Timestamp</th>
+                    <th>Last Login Timestamp</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: `/get_user_history`,
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                $('#userLoginHistoryTable').DataTable({
+                    data: data,
+                    scrollX: true
+                });
+            }
+        });
+    })
+
+    function loadProfileInfo(address) {
+        $.ajax({
+            url: `/get_commodity_list?address=${address}`,
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                $('#sellingListTable').DataTable({
+                    data: data,
+                    scrollX: true
+                });
+            }
+        });
+
+        $.ajax({
+            url: `/get_contract_history?address=${address}`,
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                $('#contractHistoryTable').DataTable({
+                    data: data,
+                    columns: [
+                        {data: 'nonce'},
+                        {data: 'type'},
+                        {data: 'blockHash'},
+                        {data: 'blockNumber'},
+                        {data: 'transactionIndex'},
+                        {data: 'from'},
+                        {data: 'gas'},
+                        {data: 'gasPrice'},
+                    ],
+                    scrollX: true,
+                });
+            }
+        });
+
+        $.ajax({
+            url: `/get_transaction_history?address=${address}`,
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                console.log(data);
+                $('#example').DataTable({
+                    data: data,
+                    columns: [
+                        // {data: 'hash'},
+                        // {data: 'type'},
+                        {data: 'nonce'},
+                        {data: 'blockHash'},
+                        {data: 'blockNumber'},
+                        {data: 'transactionIndex'},
+                        {data: 'from'},
+                        {data: 'to'},
+                        {data: 'value'},
+                        {data: 'gas'},
+                        {data: 'gasPrice'},
+                        // {data: 'input'}
+                    ],
+                    scrollX: true,
+                });
+            }
+        });
+    }
+</script>
+<style>
+    .f32 .flag {
+        vertical-align: middle;
+        margin: -8px 0;
+    }
+
+    progress {
+        width: 100%;
+    }
+</style>
+</html>
