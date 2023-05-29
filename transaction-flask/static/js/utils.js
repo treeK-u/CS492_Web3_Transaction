@@ -18,6 +18,7 @@ async function sendETH(price, from, to) {
             method: 'eth_sendTransaction',
             params: [
                 {
+                    nonce: web3.eth.getTransactionCount(from),
                     from: from,
                     to: to,
                     // toWei 함수 제거됨 : eth -> wei 공식 : eth * 10^18
