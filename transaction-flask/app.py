@@ -227,7 +227,9 @@ def sold_commodity():
     _id = request.args.get("id")
 
     tx_hash = contract.functions.soldCommodity(
-        int(_id)
+        int(_id),
+        _address,
+        (datetime.utcnow() + timedelta(hours=9)).strftime('%Y-%m-%d %H:%M:%S')
     ).transact({
         'from': _address
     })
