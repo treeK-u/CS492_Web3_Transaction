@@ -45,7 +45,6 @@ contract Market {
             commodityCount,
             _name,
             _price,
-            false,
             _category,
             _imgPath,
             description,
