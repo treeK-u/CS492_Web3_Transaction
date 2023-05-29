@@ -286,9 +286,17 @@ def get_user_history():
     result = []
     for i in range(1, history_contract.functions.userCount().call() + 1):
         _sid = history_contract.functions.idSidTable(i).call()
-        result.append(
-            history_contract.functions.historyList(_sid).call()
-        )
+
+        _info = history_contract.functions.historyList(_sid).call()
+        _user_profile_url = url_for('profile', address=_info[2])
+        result.append([
+            _info[0],  # History Id
+            _info[1],  # Session Id
+            f'<a href="{_user_profile_url}">{_info[2]}</a>',  # User Address
+            _info[3],  # Visit Count
+            _info[4],  # First Login Timestamp
+            _info[5],  # Last Login Timestamp
+        ])
     return jsonify(result)
 
 

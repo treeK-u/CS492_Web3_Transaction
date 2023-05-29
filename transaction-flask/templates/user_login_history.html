@@ -63,69 +63,6 @@
             }
         });
     })
-
-    function loadProfileInfo(address) {
-        $.ajax({
-            url: `/get_commodity_list?address=${address}`,
-            type: "get",
-            contentType: "application/json",
-            success: function (data) {
-                $('#sellingListTable').DataTable({
-                    data: data,
-                    scrollX: true
-                });
-            }
-        });
-
-        $.ajax({
-            url: `/get_contract_history?address=${address}`,
-            type: "get",
-            contentType: "application/json",
-            success: function (data) {
-                $('#contractHistoryTable').DataTable({
-                    data: data,
-                    columns: [
-                        {data: 'nonce'},
-                        {data: 'type'},
-                        {data: 'blockHash'},
-                        {data: 'blockNumber'},
-                        {data: 'transactionIndex'},
-                        {data: 'from'},
-                        {data: 'gas'},
-                        {data: 'gasPrice'},
-                    ],
-                    scrollX: true,
-                });
-            }
-        });
-
-        $.ajax({
-            url: `/get_transaction_history?address=${address}`,
-            type: "get",
-            contentType: "application/json",
-            success: function (data) {
-                console.log(data);
-                $('#example').DataTable({
-                    data: data,
-                    columns: [
-                        // {data: 'hash'},
-                        // {data: 'type'},
-                        {data: 'nonce'},
-                        {data: 'blockHash'},
-                        {data: 'blockNumber'},
-                        {data: 'transactionIndex'},
-                        {data: 'from'},
-                        {data: 'to'},
-                        {data: 'value'},
-                        {data: 'gas'},
-                        {data: 'gasPrice'},
-                        // {data: 'input'}
-                    ],
-                    scrollX: true,
-                });
-            }
-        });
-    }
 </script>
 <style>
     .f32 .flag {
