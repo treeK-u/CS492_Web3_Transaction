@@ -42,8 +42,6 @@
                         <div class="col-10">
                             <div class="row justify-content-end">
                                 <div class="col-3">
-                                    <label for="quantity">Quantity : </label>
-                                    <input type="number" id="quantity" name="quantity" min="1" max="5">
                                     <button type="button" id="buy-product" class="btn btn-dark" style="width: 100%" disabled>구매하기</button>
                                 </div>
                             </div>
@@ -73,7 +71,13 @@
                     document.getElementById('product-description').innerText = data['description'];
 
                     document.getElementById('buy-product').addEventListener('click', function (event) {
-                        sendETH(data['price'], data['sellerAddress']);
+                        getAccount().then((address) => {
+                            $.ajax({
+                                url: `/sold_commodity?id=${id}&address=${address}`,
+                                type: 'get',
+                                success: function() {sendETH(data['price'], address, data['sellerAddress']);}
+                            })
+                        });
                     })
                     if (data['isSold']) {
                         document.getElementById('buy-product').innerText = 'Sold Out';

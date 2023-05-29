@@ -220,6 +220,20 @@ def create_commodity():
     return redirect('/home')
 
 
+@app.route('sold_commodity')
+def sold_commodity():
+    _address = conn.to_checksum_address(request.args.get("address"))
+    _id = request.args.get("id")
+
+    tx_hash = contract.functions.soldCommodity(
+        int(_id)
+    ).transact({
+        'from': _address
+    })
+    print(conn.eth.wait_for_transaction_receipt(tx_hash))
+    return jsonify({'result': True})
+
+
 @app.route('/update_history')
 def update_history():
     sid = request.args.get('sid')

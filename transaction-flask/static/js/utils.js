@@ -9,12 +9,9 @@ async function getAccount() {
     }
 }
 
-async function sendETH(price, sellerAddress) {
+async function sendETH(price, from, to) {
     try {
         let web3 = new Web3();
-
-        // Sender Address
-        const from = await getAccount();
 
         // 전송 트랜잭션 생성
         const txHash = await window.ethereum.request({
@@ -22,7 +19,7 @@ async function sendETH(price, sellerAddress) {
             params: [
                 {
                     from: from,
-                    to: sellerAddress,
+                    to: to,
                     // toWei 함수 제거됨 : eth -> wei 공식 : eth * 10^18
                     value: web3.utils.toHex(web3.utils.toWei(price.toString(), "ether")),
                 },
