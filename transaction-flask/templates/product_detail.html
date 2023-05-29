@@ -37,13 +37,13 @@
                         <div class="col-10">
                             <span id="product-price">- ETH</span>
                         </div>
-                        <div class="col-10 mt-2">
+                        <div class="col-10 mt-2" style="max-width: 100%">
                             <span id="product-description">- ETH</span>
                         </div>
                         <div class="col-10">
                             <div class="row justify-content-end">
                                 <div class="col-3">
-                                    <button type="button" id="buy-product" class="btn btn-dark" style="width: 100%" disabled>구매하기</button>
+                                    <button type="button" id="buy-product" class="btn btn-dark" style="width: 100%">구매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -81,23 +81,19 @@
                                     success: function(result) {
                                         console.log(result);
                                         if(result['result']) {
-                                            if (! alert('Successful Message')) {
+                                            if (! alert('Purchase Successful')) {
                                                 window.location.reload();
                                             }
                                         } else {
-                                            alert("실패하였습니다.");
+                                            alert("Purchase Failed");
                                         }
                                     }
                                 })
                             })
                         });
                     })
-                    if (data['isSold']) {
-                        document.getElementById('buy-product').innerText = 'Sold Out';
-                    }
-                    document.getElementById('buy-product').disabled = data['isSold'];
                 } else {
-                    alert("정상적인 아이템이 아닙니다!");
+                    alert("Invalid Product!");
                     location.href = '/home';
                 }
 
