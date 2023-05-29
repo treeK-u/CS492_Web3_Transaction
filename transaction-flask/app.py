@@ -16,7 +16,7 @@ app = Flask(
 
 # conn = Web3(HTTPProvider('http://127.0.0.1:7545'))
 conn = Web3(HTTPProvider('http://54.91.173.221:7545'))
-network_id = '1685357026449'
+network_id = '1685357598790'
 
 # Load Smart Contract - Market
 with open('/home/ubuntu//transaction-truffle/build/contracts/Market.json') as f:
