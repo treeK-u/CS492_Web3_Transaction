@@ -78,7 +78,7 @@
                                 $.ajax({
                                     url: `/sold_commodity?id=${id}&address=${address}`,
                                     type: 'get',
-                                    success: function() {}
+                                    success: function() {location.reload();}
                                 })
                             })
                         });
