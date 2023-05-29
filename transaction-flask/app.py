@@ -270,7 +270,11 @@ def get_user_purchase_history():
         _purchase_timestamp = _record[3]
 
         if target_address == str(_address).lower():
-            result.append(_record)
+            result.append([
+                url_for('product_detail', id=_id),  # Purchase Transaction Id
+                _purchased_item_id,  # Purchased Item Id
+                _purchase_timestamp  # Purchase Timestamp
+            ])
 
     return jsonify(result)
 
