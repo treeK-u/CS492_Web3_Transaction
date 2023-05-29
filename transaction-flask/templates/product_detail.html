@@ -80,7 +80,7 @@
                                     type: 'get',
                                     success: function(result) {
                                         if(result) {
-                                            if (confirm('Successful Message')) {
+                                            if (! alert('Successful Message')) {
                                                 window.location.reload();
                                             }
                                         } else {
