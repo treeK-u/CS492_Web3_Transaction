@@ -6,12 +6,14 @@ contract Market {
         uint id;
         string name;
         uint price;
-        bool isSold;
 
         string category;
         string imgPath;
         string description;
         address sellerAddress;
+
+        uint soldCount;
+        bool isDeleted;
     }
 
     // Globals
@@ -21,7 +23,7 @@ contract Market {
     // Events
     event CommodityCreated(
         uint id,
-        bool isSold
+        string name
     );
 
     event CommoditySold(
@@ -47,16 +49,26 @@ contract Market {
             _category,
             _imgPath,
             description,
-            sellerAddress
+            sellerAddress,
+            0,
+            false
         );
 
-        emit CommodityCreated(commodityCount, false);
+        emit CommodityCreated(commodityCount, _name);
     }
 
     function soldCommodity(uint _id) public {
         Commodity memory _commodity = commodityList[_id];
-        _commodity.isSold = !_commodity.isSold;
+        _commodity.soldCount++;
+
         commodityList[_id] = _commodity;
         emit CommoditySold(_id);
+    }
+
+    function deleteCommodity(uint _id) public {
+        Commodity memory _commodity = commodityList[_id];
+        _commodity.isDeleted = true;
+
+        commodityList[_id] = _commodity;
     }
 }

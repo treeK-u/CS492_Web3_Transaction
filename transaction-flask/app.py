@@ -149,19 +149,18 @@ def get_commodity_list():
         _raw_result = contract.functions.commodityList(i + 1).call()
 
         _url = url_for('product_detail', id=_raw_result[0])
-        _img = url_for('static', filename=f'img/{_raw_result[5]}')
-        _user_profile_url = url_for('profile', address=_raw_result[7])
+        _img = url_for('static', filename=f'img/{_raw_result[4]}')
+        _user_profile_url = url_for('profile', address=_raw_result[6])
 
-        _flag = (_raw_result[7].lower() == target_address.lower()) if target_address else True
+        _flag = (_raw_result[6].lower() == target_address.lower()) if target_address else True
         if _flag:
             result.append([
                 f'<img src="{_img}" style="max-width:100%; max-height:100%" />',  # img
-                _raw_result[4],  # category
+                _raw_result[3],  # category
                 _raw_result[0],  # id
                 _raw_result[1],  # name
                 _raw_result[2],  # price
-                _raw_result[3],  # is Sold,
-                f'<a href="{_user_profile_url}">{_raw_result[7]}</a>',  # sellerAddress
+                f'<a href="{_user_profile_url}">{_raw_result[6]}</a>',  # sellerAddress
                 f'<a href="{_url}">Link</a>'  # Link
             ])
     return jsonify(result)
@@ -179,17 +178,16 @@ def get_commodity():
         ).call()
 
         _url = url_for('product_detail', id=_raw_result[0])
-        _img = url_for('static', filename=f'img/{_raw_result[5]}')
+        _img = url_for('static', filename=f'img/{_raw_result[4]}')
 
         result = {
             'imgPath': _img,
-            'category': _raw_result[4],  # category
+            'category': _raw_result[3],  # category
             'id': _raw_result[0],  # id
             'name': _raw_result[1],  # name
             'price': _raw_result[2],  # price
-            'isSold': _raw_result[3],  # is Sold
-            'description': _raw_result[6],  # description
-            'sellerAddress': _raw_result[7],  # Seller Address
+            'description': _raw_result[5],  # description
+            'sellerAddress': _raw_result[6],  # Seller Address
         }
     else:
         result = {}
