@@ -79,6 +79,7 @@
                                     url: `/sold_commodity?id=${id}&address=${address}`,
                                     type: 'get',
                                     success: function(result) {
+                                        console.log(result);
                                         if(result) {
                                             if (! alert('Successful Message')) {
                                                 window.location.reload();
