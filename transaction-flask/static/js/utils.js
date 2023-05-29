@@ -15,6 +15,7 @@ async function sendETH(price, from, to) {
 
         // 전송 트랜잭션 생성
         let nonce = web3.eth.getTransactionCount(from);
+        console.log(nonce);
         const txHash = await window.ethereum.request({
             method: 'eth_sendTransaction',
             params: [
