@@ -220,7 +220,7 @@ def create_commodity():
     return redirect('/home')
 
 
-@app.route('sold_commodity')
+@app.route('/sold_commodity')
 def sold_commodity():
     _address = conn.to_checksum_address(request.args.get("address"))
     _id = request.args.get("id")
