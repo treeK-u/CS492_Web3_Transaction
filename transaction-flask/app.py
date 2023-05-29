@@ -270,9 +270,11 @@ def get_user_purchase_history():
         _purchase_timestamp = _record[3]
 
         if target_address == str(_address).lower():
+            _url = url_for('product_detail', id=_purchased_item_id)
+            _product_name = contract.functions.commodityList(_purchased_item_id).call()[1]
             result.append([
-                url_for('product_detail', id=_id),  # Purchase Transaction Id
-                _purchased_item_id,  # Purchased Item Id
+                _id,  # Purchase Transaction Id
+                f'<a href="{_url}">{_product_name}</a>',  # Purchased Item Id
                 _purchase_timestamp  # Purchase Timestamp
             ])
 
