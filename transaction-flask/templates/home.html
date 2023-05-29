@@ -69,7 +69,8 @@
                 console.log(data);
                 $('#example').DataTable({
                     data: data,
-                    scrollX: true
+                    scrollX: true,
+                    order: [[2, 'desc']]
                 });
             }
         });

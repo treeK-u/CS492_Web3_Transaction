@@ -139,7 +139,8 @@
             success: function (data) {
                 $('#purchaseHistoryTable').DataTable({
                     data: data,
-                    scrollX: true
+                    scrollX: true,
+                    order: [[2, 'desc']],
                 });
             }
         });
