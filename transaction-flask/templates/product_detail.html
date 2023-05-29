@@ -72,8 +72,7 @@
                     document.getElementById('product-soldCount').innerText = data['soldCount'];
                     document.getElementById('buy-product').addEventListener('click', function (event) {
                         getAccount().then((address) => {
-                            {#sendETH(data['price'], address, data['sellerAddress']).then(() => {#}
-                            sendETH(0.8, address, data['sellerAddress']).then(() => {
+                            sendETH(data['price'], address, data['sellerAddress']).then(() => {
                                 $.ajax({
                                     url: `/sold_commodity?id=${id}&address=${address}`,
                                     type: 'get',
