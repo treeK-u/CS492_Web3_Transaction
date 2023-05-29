@@ -102,11 +102,13 @@ def get_contract_history():
         block = conn.eth.get_block(block_num)
         for transaction in dict(block)["transactions"]:
             _info = dict(conn.eth.get_transaction(transaction.hex()))
+            _info['timestamp'] = datetime.utcfromtimestamp(block.timestamp).strftime('%Y-%m-%d %H:%M:%S')
+
             _from = _info["from"].lower() if _info["from"] else _info["from"]
             _to = _info["to"].lower() if _info["to"] else _info["to"]
 
             _address = [_from, _to]
-            if target_address.lower() in _address  and (contract.address.lower() in _address or history_contract.address.lower() in _address):
+            if target_address.lower() in _address and (contract.address.lower() in _address or history_contract.address.lower() in _address):
                 result.append(
                     {k: v.hex() if isinstance(v, hexbytes.main.HexBytes) else v for k, v in _info.items()}
                 )
@@ -121,8 +123,11 @@ def get_transaction_history():
         block = conn.eth.get_block(block_num)
         for transaction in dict(block)["transactions"]:
             _info = dict(conn.eth.get_transaction(transaction.hex()))
+            _info['timestamp'] = datetime.utcfromtimestamp(block.timestamp).strftime('%Y-%m-%d %H:%M:%S')
+
             _from = _info["from"].lower() if _info["from"] else _info["from"]
             _to = _info["to"].lower() if _info["to"] else _info["to"]
+
             if target_address.lower() in [_to, _from] and _from and _to:
                 result.append(
                     {k: v.hex() if isinstance(v, hexbytes.main.HexBytes) else v for k, v in _info.items()}
