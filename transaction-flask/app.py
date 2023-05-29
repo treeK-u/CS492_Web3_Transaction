@@ -104,7 +104,9 @@ def get_contract_history():
             _info = dict(conn.eth.get_transaction(transaction.hex()))
             _from = _info["from"].lower() if _info["from"] else _info["from"]
             _to = _info["to"].lower() if _info["to"] else _info["to"]
-            if target_address.lower() in [_to, _from] and _from and not _to:
+
+            _address = [_from, _to]
+            if target_address.lower() in _address  and (contract.address.lower() in _address or history_contract.address.lower() in _address):
                 result.append(
                     {k: v.hex() if isinstance(v, hexbytes.main.HexBytes) else v for k, v in _info.items()}
                 )
@@ -121,8 +123,6 @@ def get_transaction_history():
             _info = dict(conn.eth.get_transaction(transaction.hex()))
             _from = _info["from"].lower() if _info["from"] else _info["from"]
             _to = _info["to"].lower() if _info["to"] else _info["to"]
-            print(_from)
-            print(_to)
             if target_address.lower() in [_to, _from] and _from and _to:
                 result.append(
                     {k: v.hex() if isinstance(v, hexbytes.main.HexBytes) else v for k, v in _info.items()}
@@ -169,7 +169,6 @@ def get_commodity():
 
     _id = int(request.args.get('id'))
     if 1 <= _id <= contract.functions.commodityCount().call():
-        print("he"*10)
         _raw_result = contract.functions.commodityList(
             _id
         ).call()
@@ -195,7 +194,6 @@ def get_commodity():
 @app.route('/create_commodity', methods=['POST'])
 def create_commodity():
     form_data = request.form
-    print(form_data)
 
     address = conn.to_checksum_address(form_data['address'])
     imgFile = request.files['imgFile']
@@ -224,14 +222,8 @@ def update_history():
     sid = request.args.get('sid')
     address = conn.to_checksum_address(request.args.get('address'))
 
-    print("===" * 30)
-    print(sid)
-    print(address)
-    print(dir(history_contract.functions))
     current_timestamp = (datetime.utcnow() + timedelta(hours=9)).strftime('%Y-%m-%d %H:%M:%S')
     user_info = history_contract.functions.historyList(sid).call()
-    print(user_info)
-    print('=-=-' * 20)
     if user_info[0]:
         history_contract.functions.updateHistory(sid, address, current_timestamp).transact({
             'from': address
