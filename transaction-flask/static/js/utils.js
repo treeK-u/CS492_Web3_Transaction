@@ -13,14 +13,10 @@ async function sendETH(price, from, to) {
     try {
         let web3 = new Web3();
 
-        // 전송 트랜잭션 생성
-        let nonce =  await web3.eth.getTransactionCount(from, 'pending');
-        console.log(nonce);
         const txHash = await window.ethereum.request({
             method: 'eth_sendTransaction',
             params: [
                 {
-                    nonce: nonce,
                     from: from,
                     to: to,
                     // toWei 함수 제거됨 : eth -> wei 공식 : eth * 10^18
