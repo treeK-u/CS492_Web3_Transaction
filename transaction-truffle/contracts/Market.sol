@@ -16,9 +16,18 @@ contract Market {
         bool isDeleted;
     }
 
+    struct PurchaseHistory {
+        uint id;
+        uint commodityId;
+        address buyerAddress;
+        string purchaseTimestamp;
+    }
+
     // Globals
     uint public commodityCount = 0;
     mapping(uint => Commodity) public commodityList;
+    uint public purchaseCount = 0;
+    PurchaseHistory[] public purchaseHistoryList;
 
     // Events
     event CommodityCreated(
@@ -56,11 +65,19 @@ contract Market {
         emit CommodityCreated(commodityCount, _name);
     }
 
-    function soldCommodity(uint _id) public {
+    function soldCommodity(uint _id, address buyerAddress, string memory timestamp) public {
         Commodity memory _commodity = commodityList[_id];
         _commodity.soldCount++;
 
         commodityList[_id] = _commodity;
+
+        purchaseCount++;
+        purchaseHistoryList.push(PurchaseHistory(
+            purchaseCount,
+            _id,
+            buyerAddress,
+            timestamp
+        ));
         emit CommoditySold(_id);
     }
 
