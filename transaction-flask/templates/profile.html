@@ -30,6 +30,27 @@
 <div class="container-fluid">
     <div class="row mt-4 justify-content-center">
         <div class="col-10">
+            <h3>Purchase History</h3>
+            <hr/>
+        </div>
+        <div class="col-10">
+            <table id="purchaseHistoryTable" class="display" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Imgae</th>
+                    <th>Category</th>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Seller Address</th>
+                    <th>Url</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-4 justify-content-center">
+        <div class="col-10">
             <h3>Selling Items</h3>
             <hr/>
         </div>
@@ -115,6 +136,18 @@
         }
     })
     function loadProfileInfo(address) {
+        $.ajax({
+            url: `/get_user_purchase_history?address=${address}`,
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                $('#purchaseHistoryTable').DataTable({
+                    data: data,
+                    scrollX: true
+                });
+            }
+        });
+
         $.ajax({
             url: `/get_commodity_list?address=${address}`,
             type: "get",

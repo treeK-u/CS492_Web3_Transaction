@@ -255,6 +255,26 @@ def update_history():
     return jsonify({'result': True})
 
 
+@app.route('/get_user_purchase_history')
+def get_user_purchase_history():
+    result = []
+    target_address = str(request.args.get('address')).lower()
+
+    purchase_count = int(contract.functions.purchaseCount().call())
+    for i in range(purchase_count):
+        _record = contract.functions.purchaseHistoryList(i).call()
+
+        _id = _record[0]
+        _purchased_item_id = _record[1]
+        _address = _record[2]
+        _purchase_timestamp = _record[3]
+
+        if target_address == str(_address).lower():
+            result.append(_record)
+
+    return jsonify(result)
+
+
 @app.route('/get_user_history')
 def get_user_history():
     result = []
