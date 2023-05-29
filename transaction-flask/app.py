@@ -102,7 +102,7 @@ def get_contract_history():
         block = conn.eth.get_block(block_num)
         for transaction in dict(block)["transactions"]:
             _info = dict(conn.eth.get_transaction(transaction.hex()))
-            _info['timestamp'] = datetime.utcfromtimestamp(block.timestamp).strftime('%Y-%m-%d %H:%M:%S')
+            _info['timestamp'] = (datetime.utcfromtimestamp(block.timestamp) + timedelta(hours=9)).strftime('%Y-%m-%d %H:%M:%S')
 
             _from = _info["from"].lower() if _info["from"] else _info["from"]
             _to = _info["to"].lower() if _info["to"] else _info["to"]
@@ -123,7 +123,7 @@ def get_transaction_history():
         block = conn.eth.get_block(block_num)
         for transaction in dict(block)["transactions"]:
             _info = dict(conn.eth.get_transaction(transaction.hex()))
-            _info['timestamp'] = datetime.utcfromtimestamp(block.timestamp).strftime('%Y-%m-%d %H:%M:%S')
+            _info['timestamp'] = (datetime.utcfromtimestamp(block.timestamp) + timedelta(hours=9)).strftime('%Y-%m-%d %H:%M:%S')
 
             _from = _info["from"].lower() if _info["from"] else _info["from"]
             _to = _info["to"].lower() if _info["to"] else _info["to"]
