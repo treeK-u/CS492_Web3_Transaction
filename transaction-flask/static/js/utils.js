@@ -31,7 +31,6 @@ async function sendETH(price, from, to) {
         result = true;
     } catch (error) {
         console.error('오류 발생:', error);
-        alert("실패!");
     }
     return result;
 }
