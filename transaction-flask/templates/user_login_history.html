@@ -58,7 +58,8 @@
             success: function (data) {
                 $('#userLoginHistoryTable').DataTable({
                     data: data,
-                    scrollX: true
+                    scrollX: true,
+                    pageLength: 50
                 });
             }
         });
