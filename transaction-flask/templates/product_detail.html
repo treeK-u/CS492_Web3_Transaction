@@ -31,6 +31,7 @@
                     <div class="row mt-2 justify-content-center">
                         <div class="col-10">
                             <h5 id="product-name"> - </h5>
+                            <footer class="blockquote-footer"> Sold Count : <span id="product-soldCount">Source Title</span></footer>
                             <hr />
                         </div>
                         <div class="col-10">
@@ -70,6 +71,7 @@
                     document.getElementById('product-price').innerText = `${data['price']} ETH`;
                     document.getElementById('product-description').innerText = data['description'];
 
+                    document.getElementById('product-soldCount').innerText = data['soldCount'];
                     document.getElementById('buy-product').addEventListener('click', function (event) {
                         getAccount().then((address) => {
                             sendETH(data['price'], address, data['sellerAddress']).then(() => {

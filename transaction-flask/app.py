@@ -188,6 +188,7 @@ def get_commodity():
             'price': _raw_result[2],  # price
             'description': _raw_result[5],  # description
             'sellerAddress': _raw_result[6],  # Seller Address
+            'soldCount': _raw_result[7],  # Sold Count
         }
     else:
         result = {}
