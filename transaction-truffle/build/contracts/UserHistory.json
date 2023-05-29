@@ -191,14 +191,14 @@
     "absolutePath": "project:/contracts/UserHistory.sol",
     "exportedSymbols": {
       "UserHistory": [
-        289
+        313
       ]
     },
-    "id": 290,
+    "id": 314,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 164,
+        "id": 188,
         "literals": [
           "solidity",
           "^",
@@ -214,24 +214,24 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 289,
+        "id": 313,
         "linearizedBaseContracts": [
-          289
+          313
         ],
         "name": "UserHistory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "UserHistory.UserSessionHistory",
-            "id": 177,
+            "id": 201,
             "members": [
               {
                 "constant": false,
-                "id": 166,
+                "id": 190,
                 "mutability": "mutable",
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 177,
+                "scope": 201,
                 "src": "88:7:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -240,7 +240,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 165,
+                  "id": 189,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "88:4:2",
@@ -253,11 +253,11 @@
               },
               {
                 "constant": false,
-                "id": 168,
+                "id": 192,
                 "mutability": "mutable",
                 "name": "sessionId",
                 "nodeType": "VariableDeclaration",
-                "scope": 177,
+                "scope": 201,
                 "src": "105:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -266,7 +266,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 167,
+                  "id": 191,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "105:6:2",
@@ -279,11 +279,11 @@
               },
               {
                 "constant": false,
-                "id": 170,
+                "id": 194,
                 "mutability": "mutable",
                 "name": "userAddress",
                 "nodeType": "VariableDeclaration",
-                "scope": 177,
+                "scope": 201,
                 "src": "131:19:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -292,7 +292,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 169,
+                  "id": 193,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "131:7:2",
@@ -306,11 +306,11 @@
               },
               {
                 "constant": false,
-                "id": 172,
+                "id": 196,
                 "mutability": "mutable",
                 "name": "visitCount",
                 "nodeType": "VariableDeclaration",
-                "scope": 177,
+                "scope": 201,
                 "src": "160:15:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -319,7 +319,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 171,
+                  "id": 195,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "160:4:2",
@@ -332,11 +332,11 @@
               },
               {
                 "constant": false,
-                "id": 174,
+                "id": 198,
                 "mutability": "mutable",
                 "name": "firstLoginTimestamp",
                 "nodeType": "VariableDeclaration",
-                "scope": 177,
+                "scope": 201,
                 "src": "186:26:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -345,7 +345,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 173,
+                  "id": 197,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "186:6:2",
@@ -358,11 +358,11 @@
               },
               {
                 "constant": false,
-                "id": 176,
+                "id": 200,
                 "mutability": "mutable",
                 "name": "lastLoginTimestamp",
                 "nodeType": "VariableDeclaration",
-                "scope": 177,
+                "scope": 201,
                 "src": "222:25:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -371,7 +371,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 175,
+                  "id": 199,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "222:6:2",
@@ -385,18 +385,18 @@
             ],
             "name": "UserSessionHistory",
             "nodeType": "StructDefinition",
-            "scope": 289,
+            "scope": 313,
             "src": "52:202:2",
             "visibility": "public"
           },
           {
             "constant": false,
             "functionSelector": "07973ccf",
-            "id": 180,
+            "id": 204,
             "mutability": "mutable",
             "name": "userCount",
             "nodeType": "VariableDeclaration",
-            "scope": 289,
+            "scope": 313,
             "src": "260:25:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -405,7 +405,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 178,
+              "id": 202,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "260:4:2",
@@ -416,7 +416,7 @@
             },
             "value": {
               "hexValue": "30",
-              "id": 179,
+              "id": 203,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -435,11 +435,11 @@
           {
             "constant": false,
             "functionSelector": "c120ee5d",
-            "id": 184,
+            "id": 208,
             "mutability": "mutable",
             "name": "idSidTable",
             "nodeType": "VariableDeclaration",
-            "scope": 289,
+            "scope": 313,
             "src": "291:41:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -448,9 +448,9 @@
               "typeString": "mapping(uint256 => string)"
             },
             "typeName": {
-              "id": 183,
+              "id": 207,
               "keyType": {
-                "id": 181,
+                "id": 205,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "299:4:2",
@@ -466,7 +466,7 @@
                 "typeString": "mapping(uint256 => string)"
               },
               "valueType": {
-                "id": 182,
+                "id": 206,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "307:6:2",
@@ -481,22 +481,22 @@
           {
             "constant": false,
             "functionSelector": "89830328",
-            "id": 188,
+            "id": 212,
             "mutability": "mutable",
             "name": "historyList",
             "nodeType": "VariableDeclaration",
-            "scope": 289,
+            "scope": 313,
             "src": "338:56:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$177_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$201_storage_$",
               "typeString": "mapping(string => struct UserHistory.UserSessionHistory)"
             },
             "typeName": {
-              "id": 187,
+              "id": 211,
               "keyType": {
-                "id": 185,
+                "id": 209,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "346:6:2",
@@ -508,17 +508,17 @@
               "nodeType": "Mapping",
               "src": "338:37:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$177_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$201_storage_$",
                 "typeString": "mapping(string => struct UserHistory.UserSessionHistory)"
               },
               "valueType": {
-                "id": 186,
+                "id": 210,
                 "name": "UserSessionHistory",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 177,
+                "referencedDeclaration": 201,
                 "src": "356:18:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_UserSessionHistory_$177_storage_ptr",
+                  "typeIdentifier": "t_struct$_UserSessionHistory_$201_storage_ptr",
                   "typeString": "struct UserHistory.UserSessionHistory"
                 }
               }
@@ -527,21 +527,21 @@
           },
           {
             "anonymous": false,
-            "id": 196,
+            "id": 220,
             "name": "historyCreated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 195,
+              "id": 219,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 190,
+                  "id": 214,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "sessionId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 196,
+                  "scope": 220,
                   "src": "445:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -550,7 +550,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 189,
+                    "id": 213,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "445:6:2",
@@ -563,12 +563,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 192,
+                  "id": 216,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "userAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 196,
+                  "scope": 220,
                   "src": "471:19:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -577,7 +577,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 191,
+                    "id": 215,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "471:7:2",
@@ -591,12 +591,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 194,
+                  "id": 218,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "firstLoginTimestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 196,
+                  "scope": 220,
                   "src": "500:26:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -605,7 +605,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 193,
+                    "id": 217,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "500:6:2",
@@ -623,21 +623,21 @@
           },
           {
             "anonymous": false,
-            "id": 204,
+            "id": 228,
             "name": "historyUpdated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 203,
+              "id": 227,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 198,
+                  "id": 222,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "sessionId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 204,
+                  "scope": 228,
                   "src": "569:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -646,7 +646,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 197,
+                    "id": 221,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "569:6:2",
@@ -659,12 +659,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 200,
+                  "id": 224,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "userAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 204,
+                  "scope": 228,
                   "src": "595:19:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -673,7 +673,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 199,
+                    "id": 223,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "595:7:2",
@@ -687,12 +687,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 202,
+                  "id": 226,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "lastLoginTimestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 204,
+                  "scope": 228,
                   "src": "624:25:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -701,7 +701,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 201,
+                    "id": 225,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "624:6:2",
@@ -719,13 +719,13 @@
           },
           {
             "body": {
-              "id": 241,
+              "id": 265,
               "nodeType": "Block",
               "src": "768:264:2",
               "statements": [
                 {
                   "expression": {
-                    "id": 214,
+                    "id": 238,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -735,11 +735,11 @@
                     "prefix": false,
                     "src": "778:11:2",
                     "subExpression": {
-                      "id": 213,
+                      "id": 237,
                       "name": "userCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 180,
+                      "referencedDeclaration": 204,
                       "src": "778:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -751,37 +751,37 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 215,
+                  "id": 239,
                   "nodeType": "ExpressionStatement",
                   "src": "778:11:2"
                 },
                 {
                   "expression": {
-                    "id": 227,
+                    "id": 251,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 216,
+                        "id": 240,
                         "name": "historyList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 188,
+                        "referencedDeclaration": 212,
                         "src": "799:11:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$177_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$201_storage_$",
                           "typeString": "mapping(string memory => struct UserHistory.UserSessionHistory storage ref)"
                         }
                       },
-                      "id": 218,
+                      "id": 242,
                       "indexExpression": {
-                        "id": 217,
+                        "id": 241,
                         "name": "sessionId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 206,
+                        "referencedDeclaration": 230,
                         "src": "811:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -795,7 +795,7 @@
                       "nodeType": "IndexAccess",
                       "src": "799:22:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_UserSessionHistory_$177_storage",
+                        "typeIdentifier": "t_struct$_UserSessionHistory_$201_storage",
                         "typeString": "struct UserHistory.UserSessionHistory storage ref"
                       }
                     },
@@ -804,11 +804,11 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 220,
+                          "id": 244,
                           "name": "userCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 180,
+                          "referencedDeclaration": 204,
                           "src": "843:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -816,11 +816,11 @@
                           }
                         },
                         {
-                          "id": 221,
+                          "id": 245,
                           "name": "sessionId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 206,
+                          "referencedDeclaration": 230,
                           "src": "854:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -828,11 +828,11 @@
                           }
                         },
                         {
-                          "id": 222,
+                          "id": 246,
                           "name": "userAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 208,
+                          "referencedDeclaration": 232,
                           "src": "865:11:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -841,7 +841,7 @@
                         },
                         {
                           "hexValue": "31",
-                          "id": 223,
+                          "id": 247,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -856,11 +856,11 @@
                           "value": "1"
                         },
                         {
-                          "id": 224,
+                          "id": 248,
                           "name": "firstTimestamp",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 210,
+                          "referencedDeclaration": 234,
                           "src": "881:14:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -868,11 +868,11 @@
                           }
                         },
                         {
-                          "id": 225,
+                          "id": 249,
                           "name": "firstTimestamp",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 210,
+                          "referencedDeclaration": 234,
                           "src": "897:14:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -907,18 +907,18 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 219,
+                        "id": 243,
                         "name": "UserSessionHistory",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 177,
+                        "referencedDeclaration": 201,
                         "src": "824:18:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_UserSessionHistory_$177_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_UserSessionHistory_$201_storage_ptr_$",
                           "typeString": "type(struct UserHistory.UserSessionHistory storage pointer)"
                         }
                       },
-                      "id": 226,
+                      "id": 250,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -929,47 +929,47 @@
                       "src": "824:88:2",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_UserSessionHistory_$177_memory_ptr",
+                        "typeIdentifier": "t_struct$_UserSessionHistory_$201_memory_ptr",
                         "typeString": "struct UserHistory.UserSessionHistory memory"
                       }
                     },
                     "src": "799:113:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_UserSessionHistory_$177_storage",
+                      "typeIdentifier": "t_struct$_UserSessionHistory_$201_storage",
                       "typeString": "struct UserHistory.UserSessionHistory storage ref"
                     }
                   },
-                  "id": 228,
+                  "id": 252,
                   "nodeType": "ExpressionStatement",
                   "src": "799:113:2"
                 },
                 {
                   "expression": {
-                    "id": 233,
+                    "id": 257,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 229,
+                        "id": 253,
                         "name": "idSidTable",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 184,
+                        "referencedDeclaration": 208,
                         "src": "923:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                           "typeString": "mapping(uint256 => string storage ref)"
                         }
                       },
-                      "id": 231,
+                      "id": 255,
                       "indexExpression": {
-                        "id": 230,
+                        "id": 254,
                         "name": "userCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 180,
+                        "referencedDeclaration": 204,
                         "src": "934:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -990,11 +990,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 232,
+                      "id": 256,
                       "name": "sessionId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 206,
+                      "referencedDeclaration": 230,
                       "src": "947:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1007,7 +1007,7 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 234,
+                  "id": 258,
                   "nodeType": "ExpressionStatement",
                   "src": "923:33:2"
                 },
@@ -1015,11 +1015,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 236,
+                        "id": 260,
                         "name": "sessionId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 206,
+                        "referencedDeclaration": 230,
                         "src": "986:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1027,11 +1027,11 @@
                         }
                       },
                       {
-                        "id": 237,
+                        "id": 261,
                         "name": "userAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 208,
+                        "referencedDeclaration": 232,
                         "src": "997:11:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1039,11 +1039,11 @@
                         }
                       },
                       {
-                        "id": 238,
+                        "id": 262,
                         "name": "firstTimestamp",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 210,
+                        "referencedDeclaration": 234,
                         "src": "1010:14:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1066,18 +1066,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 235,
+                      "id": 259,
                       "name": "historyCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 196,
+                      "referencedDeclaration": 220,
                       "src": "971:14:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory,address,string memory)"
                       }
                     },
-                    "id": 239,
+                    "id": 263,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1092,30 +1092,30 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 240,
+                  "id": 264,
                   "nodeType": "EmitStatement",
                   "src": "966:59:2"
                 }
               ]
             },
             "functionSelector": "2bea04ed",
-            "id": 242,
+            "id": 266,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createHistory",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 211,
+              "id": 235,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 206,
+                  "id": 230,
                   "mutability": "mutable",
                   "name": "sessionId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 242,
+                  "scope": 266,
                   "src": "685:23:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1124,7 +1124,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 205,
+                    "id": 229,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "685:6:2",
@@ -1137,11 +1137,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 208,
+                  "id": 232,
                   "mutability": "mutable",
                   "name": "userAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 242,
+                  "scope": 266,
                   "src": "710:19:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1150,7 +1150,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 207,
+                    "id": 231,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "710:7:2",
@@ -1164,11 +1164,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 210,
+                  "id": 234,
                   "mutability": "mutable",
                   "name": "firstTimestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 242,
+                  "scope": 266,
                   "src": "731:28:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1177,7 +1177,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 209,
+                    "id": 233,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "731:6:2",
@@ -1192,12 +1192,12 @@
               "src": "684:76:2"
             },
             "returnParameters": {
-              "id": 212,
+              "id": 236,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "768:0:2"
             },
-            "scope": 289,
+            "scope": 313,
             "src": "662:370:2",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -1205,64 +1205,64 @@
           },
           {
             "body": {
-              "id": 287,
+              "id": 311,
               "nodeType": "Block",
               "src": "1139:319:2",
               "statements": [
                 {
                   "assignments": [
-                    252
+                    276
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 252,
+                      "id": 276,
                       "mutability": "mutable",
                       "name": "_history",
                       "nodeType": "VariableDeclaration",
-                      "scope": 287,
+                      "scope": 311,
                       "src": "1149:34:2",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_UserSessionHistory_$177_memory_ptr",
+                        "typeIdentifier": "t_struct$_UserSessionHistory_$201_memory_ptr",
                         "typeString": "struct UserHistory.UserSessionHistory"
                       },
                       "typeName": {
-                        "id": 251,
+                        "id": 275,
                         "name": "UserSessionHistory",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 177,
+                        "referencedDeclaration": 201,
                         "src": "1149:18:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UserSessionHistory_$177_storage_ptr",
+                          "typeIdentifier": "t_struct$_UserSessionHistory_$201_storage_ptr",
                           "typeString": "struct UserHistory.UserSessionHistory"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 256,
+                  "id": 280,
                   "initialValue": {
                     "baseExpression": {
-                      "id": 253,
+                      "id": 277,
                       "name": "historyList",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 188,
+                      "referencedDeclaration": 212,
                       "src": "1186:11:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$177_storage_$",
+                        "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$201_storage_$",
                         "typeString": "mapping(string memory => struct UserHistory.UserSessionHistory storage ref)"
                       }
                     },
-                    "id": 255,
+                    "id": 279,
                     "indexExpression": {
-                      "id": 254,
+                      "id": 278,
                       "name": "sessionId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 244,
+                      "referencedDeclaration": 268,
                       "src": "1198:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1276,7 +1276,7 @@
                     "nodeType": "IndexAccess",
                     "src": "1186:22:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_UserSessionHistory_$177_storage",
+                      "typeIdentifier": "t_struct$_UserSessionHistory_$201_storage",
                       "typeString": "struct UserHistory.UserSessionHistory storage ref"
                     }
                   },
@@ -1285,32 +1285,32 @@
                 },
                 {
                   "expression": {
-                    "id": 261,
+                    "id": 285,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 257,
+                        "id": 281,
                         "name": "_history",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 252,
+                        "referencedDeclaration": 276,
                         "src": "1219:8:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UserSessionHistory_$177_memory_ptr",
+                          "typeIdentifier": "t_struct$_UserSessionHistory_$201_memory_ptr",
                           "typeString": "struct UserHistory.UserSessionHistory memory"
                         }
                       },
-                      "id": 259,
+                      "id": 283,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "userAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 170,
+                      "referencedDeclaration": 194,
                       "src": "1219:20:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1320,11 +1320,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 260,
+                      "id": 284,
                       "name": "userAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 246,
+                      "referencedDeclaration": 270,
                       "src": "1242:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1337,38 +1337,38 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 262,
+                  "id": 286,
                   "nodeType": "ExpressionStatement",
                   "src": "1219:34:2"
                 },
                 {
                   "expression": {
-                    "id": 267,
+                    "id": 291,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 263,
+                        "id": 287,
                         "name": "_history",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 252,
+                        "referencedDeclaration": 276,
                         "src": "1263:8:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UserSessionHistory_$177_memory_ptr",
+                          "typeIdentifier": "t_struct$_UserSessionHistory_$201_memory_ptr",
                           "typeString": "struct UserHistory.UserSessionHistory memory"
                         }
                       },
-                      "id": 265,
+                      "id": 289,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "lastLoginTimestamp",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 176,
+                      "referencedDeclaration": 200,
                       "src": "1263:27:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1378,11 +1378,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 266,
+                      "id": 290,
                       "name": "timestamp",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 248,
+                      "referencedDeclaration": 272,
                       "src": "1293:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1395,13 +1395,13 @@
                       "typeString": "string memory"
                     }
                   },
-                  "id": 268,
+                  "id": 292,
                   "nodeType": "ExpressionStatement",
                   "src": "1263:39:2"
                 },
                 {
                   "expression": {
-                    "id": 272,
+                    "id": 296,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1412,25 +1412,25 @@
                     "src": "1312:21:2",
                     "subExpression": {
                       "expression": {
-                        "id": 269,
+                        "id": 293,
                         "name": "_history",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 252,
+                        "referencedDeclaration": 276,
                         "src": "1312:8:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UserSessionHistory_$177_memory_ptr",
+                          "typeIdentifier": "t_struct$_UserSessionHistory_$201_memory_ptr",
                           "typeString": "struct UserHistory.UserSessionHistory memory"
                         }
                       },
-                      "id": 271,
+                      "id": 295,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "visitCount",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 172,
+                      "referencedDeclaration": 196,
                       "src": "1312:19:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1442,37 +1442,37 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 273,
+                  "id": 297,
                   "nodeType": "ExpressionStatement",
                   "src": "1312:21:2"
                 },
                 {
                   "expression": {
-                    "id": 278,
+                    "id": 302,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 274,
+                        "id": 298,
                         "name": "historyList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 188,
+                        "referencedDeclaration": 212,
                         "src": "1344:11:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$177_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_UserSessionHistory_$201_storage_$",
                           "typeString": "mapping(string memory => struct UserHistory.UserSessionHistory storage ref)"
                         }
                       },
-                      "id": 276,
+                      "id": 300,
                       "indexExpression": {
-                        "id": 275,
+                        "id": 299,
                         "name": "sessionId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 244,
+                        "referencedDeclaration": 268,
                         "src": "1356:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1486,31 +1486,31 @@
                       "nodeType": "IndexAccess",
                       "src": "1344:22:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_UserSessionHistory_$177_storage",
+                        "typeIdentifier": "t_struct$_UserSessionHistory_$201_storage",
                         "typeString": "struct UserHistory.UserSessionHistory storage ref"
                       }
                     },
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 277,
+                      "id": 301,
                       "name": "_history",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 252,
+                      "referencedDeclaration": 276,
                       "src": "1369:8:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_UserSessionHistory_$177_memory_ptr",
+                        "typeIdentifier": "t_struct$_UserSessionHistory_$201_memory_ptr",
                         "typeString": "struct UserHistory.UserSessionHistory memory"
                       }
                     },
                     "src": "1344:33:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_UserSessionHistory_$177_storage",
+                      "typeIdentifier": "t_struct$_UserSessionHistory_$201_storage",
                       "typeString": "struct UserHistory.UserSessionHistory storage ref"
                     }
                   },
-                  "id": 279,
+                  "id": 303,
                   "nodeType": "ExpressionStatement",
                   "src": "1344:33:2"
                 },
@@ -1518,11 +1518,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 281,
+                        "id": 305,
                         "name": "sessionId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 244,
+                        "referencedDeclaration": 268,
                         "src": "1408:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1531,25 +1531,25 @@
                       },
                       {
                         "expression": {
-                          "id": 282,
+                          "id": 306,
                           "name": "_history",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 252,
+                          "referencedDeclaration": 276,
                           "src": "1419:8:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_UserSessionHistory_$177_memory_ptr",
+                            "typeIdentifier": "t_struct$_UserSessionHistory_$201_memory_ptr",
                             "typeString": "struct UserHistory.UserSessionHistory memory"
                           }
                         },
-                        "id": 283,
+                        "id": 307,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "userAddress",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 170,
+                        "referencedDeclaration": 194,
                         "src": "1419:20:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1557,11 +1557,11 @@
                         }
                       },
                       {
-                        "id": 284,
+                        "id": 308,
                         "name": "timestamp",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 248,
+                        "referencedDeclaration": 272,
                         "src": "1441:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1584,18 +1584,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 280,
+                      "id": 304,
                       "name": "historyUpdated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 204,
+                      "referencedDeclaration": 228,
                       "src": "1393:14:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory,address,string memory)"
                       }
                     },
-                    "id": 285,
+                    "id": 309,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1610,30 +1610,30 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 286,
+                  "id": 310,
                   "nodeType": "EmitStatement",
                   "src": "1388:63:2"
                 }
               ]
             },
             "functionSelector": "95ce8cfc",
-            "id": 288,
+            "id": 312,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "updateHistory",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 249,
+              "id": 273,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 244,
+                  "id": 268,
                   "mutability": "mutable",
                   "name": "sessionId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 288,
+                  "scope": 312,
                   "src": "1061:23:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1642,7 +1642,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 243,
+                    "id": 267,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1061:6:2",
@@ -1655,11 +1655,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 246,
+                  "id": 270,
                   "mutability": "mutable",
                   "name": "userAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 288,
+                  "scope": 312,
                   "src": "1086:19:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1668,7 +1668,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 245,
+                    "id": 269,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1086:7:2",
@@ -1682,11 +1682,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 248,
+                  "id": 272,
                   "mutability": "mutable",
                   "name": "timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 288,
+                  "scope": 312,
                   "src": "1107:23:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1695,7 +1695,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 247,
+                    "id": 271,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1107:6:2",
@@ -1710,19 +1710,19 @@
               "src": "1060:71:2"
             },
             "returnParameters": {
-              "id": 250,
+              "id": 274,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1139:0:2"
             },
-            "scope": 289,
+            "scope": 313,
             "src": "1038:420:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 290,
+        "scope": 314,
         "src": "25:1435:2"
       }
     ],
@@ -1733,7 +1733,7 @@
       "absolutePath": "project:/contracts/UserHistory.sol",
       "exportedSymbols": {
         "UserHistory": [
-          289
+          313
         ]
       }
     },
@@ -1747,7 +1747,7 @@
             ".0"
           ]
         },
-        "id": 164,
+        "id": 188,
         "name": "PragmaDirective",
         "src": "0:23:2"
       },
@@ -1763,17 +1763,17 @@
           "contractKind": "contract",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            289
+            313
           ],
           "name": "UserHistory",
-          "scope": 290
+          "scope": 314
         },
         "children": [
           {
             "attributes": {
               "canonicalName": "UserHistory.UserSessionHistory",
               "name": "UserSessionHistory",
-              "scope": 289,
+              "scope": 313,
               "visibility": "public"
             },
             "children": [
@@ -1782,7 +1782,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "id",
-                  "scope": 177,
+                  "scope": 201,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1794,12 +1794,12 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 165,
+                    "id": 189,
                     "name": "ElementaryTypeName",
                     "src": "88:4:2"
                   }
                 ],
-                "id": 166,
+                "id": 190,
                 "name": "VariableDeclaration",
                 "src": "88:7:2"
               },
@@ -1808,7 +1808,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "sessionId",
-                  "scope": 177,
+                  "scope": 201,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1820,12 +1820,12 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 167,
+                    "id": 191,
                     "name": "ElementaryTypeName",
                     "src": "105:6:2"
                   }
                 ],
-                "id": 168,
+                "id": 192,
                 "name": "VariableDeclaration",
                 "src": "105:16:2"
               },
@@ -1834,7 +1834,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "userAddress",
-                  "scope": 177,
+                  "scope": 201,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "address",
@@ -1847,12 +1847,12 @@
                       "stateMutability": "nonpayable",
                       "type": "address"
                     },
-                    "id": 169,
+                    "id": 193,
                     "name": "ElementaryTypeName",
                     "src": "131:7:2"
                   }
                 ],
-                "id": 170,
+                "id": 194,
                 "name": "VariableDeclaration",
                 "src": "131:19:2"
               },
@@ -1861,7 +1861,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "visitCount",
-                  "scope": 177,
+                  "scope": 201,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1873,12 +1873,12 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 171,
+                    "id": 195,
                     "name": "ElementaryTypeName",
                     "src": "160:4:2"
                   }
                 ],
-                "id": 172,
+                "id": 196,
                 "name": "VariableDeclaration",
                 "src": "160:15:2"
               },
@@ -1887,7 +1887,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "firstLoginTimestamp",
-                  "scope": 177,
+                  "scope": 201,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1899,12 +1899,12 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 173,
+                    "id": 197,
                     "name": "ElementaryTypeName",
                     "src": "186:6:2"
                   }
                 ],
-                "id": 174,
+                "id": 198,
                 "name": "VariableDeclaration",
                 "src": "186:26:2"
               },
@@ -1913,7 +1913,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "lastLoginTimestamp",
-                  "scope": 177,
+                  "scope": 201,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1925,17 +1925,17 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 175,
+                    "id": 199,
                     "name": "ElementaryTypeName",
                     "src": "222:6:2"
                   }
                 ],
-                "id": 176,
+                "id": 200,
                 "name": "VariableDeclaration",
                 "src": "222:25:2"
               }
             ],
-            "id": 177,
+            "id": 201,
             "name": "StructDefinition",
             "src": "52:202:2"
           },
@@ -1945,7 +1945,7 @@
               "functionSelector": "07973ccf",
               "mutability": "mutable",
               "name": "userCount",
-              "scope": 289,
+              "scope": 313,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1957,7 +1957,7 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 178,
+                "id": 202,
                 "name": "ElementaryTypeName",
                 "src": "260:4:2"
               },
@@ -1972,12 +1972,12 @@
                   "type": "int_const 0",
                   "value": "0"
                 },
-                "id": 179,
+                "id": 203,
                 "name": "Literal",
                 "src": "284:1:2"
               }
             ],
-            "id": 180,
+            "id": 204,
             "name": "VariableDeclaration",
             "src": "260:25:2"
           },
@@ -1987,7 +1987,7 @@
               "functionSelector": "c120ee5d",
               "mutability": "mutable",
               "name": "idSidTable",
-              "scope": 289,
+              "scope": 313,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(uint256 => string)",
@@ -2004,7 +2004,7 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 181,
+                    "id": 205,
                     "name": "ElementaryTypeName",
                     "src": "299:4:2"
                   },
@@ -2013,17 +2013,17 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 182,
+                    "id": 206,
                     "name": "ElementaryTypeName",
                     "src": "307:6:2"
                   }
                 ],
-                "id": 183,
+                "id": 207,
                 "name": "Mapping",
                 "src": "291:23:2"
               }
             ],
-            "id": 184,
+            "id": 208,
             "name": "VariableDeclaration",
             "src": "291:41:2"
           },
@@ -2033,7 +2033,7 @@
               "functionSelector": "89830328",
               "mutability": "mutable",
               "name": "historyList",
-              "scope": 289,
+              "scope": 313,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(string => struct UserHistory.UserSessionHistory)",
@@ -2050,27 +2050,27 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 185,
+                    "id": 209,
                     "name": "ElementaryTypeName",
                     "src": "346:6:2"
                   },
                   {
                     "attributes": {
                       "name": "UserSessionHistory",
-                      "referencedDeclaration": 177,
+                      "referencedDeclaration": 201,
                       "type": "struct UserHistory.UserSessionHistory"
                     },
-                    "id": 186,
+                    "id": 210,
                     "name": "UserDefinedTypeName",
                     "src": "356:18:2"
                   }
                 ],
-                "id": 187,
+                "id": 211,
                 "name": "Mapping",
                 "src": "338:37:2"
               }
             ],
-            "id": 188,
+            "id": 212,
             "name": "VariableDeclaration",
             "src": "338:56:2"
           },
@@ -2088,7 +2088,7 @@
                       "indexed": false,
                       "mutability": "mutable",
                       "name": "sessionId",
-                      "scope": 196,
+                      "scope": 220,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string",
@@ -2100,12 +2100,12 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 189,
+                        "id": 213,
                         "name": "ElementaryTypeName",
                         "src": "445:6:2"
                       }
                     ],
-                    "id": 190,
+                    "id": 214,
                     "name": "VariableDeclaration",
                     "src": "445:16:2"
                   },
@@ -2115,7 +2115,7 @@
                       "indexed": false,
                       "mutability": "mutable",
                       "name": "userAddress",
-                      "scope": 196,
+                      "scope": 220,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2128,12 +2128,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 191,
+                        "id": 215,
                         "name": "ElementaryTypeName",
                         "src": "471:7:2"
                       }
                     ],
-                    "id": 192,
+                    "id": 216,
                     "name": "VariableDeclaration",
                     "src": "471:19:2"
                   },
@@ -2143,7 +2143,7 @@
                       "indexed": false,
                       "mutability": "mutable",
                       "name": "firstLoginTimestamp",
-                      "scope": 196,
+                      "scope": 220,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string",
@@ -2155,22 +2155,22 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 193,
+                        "id": 217,
                         "name": "ElementaryTypeName",
                         "src": "500:6:2"
                       }
                     ],
-                    "id": 194,
+                    "id": 218,
                     "name": "VariableDeclaration",
                     "src": "500:26:2"
                   }
                 ],
-                "id": 195,
+                "id": 219,
                 "name": "ParameterList",
                 "src": "435:97:2"
               }
             ],
-            "id": 196,
+            "id": 220,
             "name": "EventDefinition",
             "src": "415:118:2"
           },
@@ -2188,7 +2188,7 @@
                       "indexed": false,
                       "mutability": "mutable",
                       "name": "sessionId",
-                      "scope": 204,
+                      "scope": 228,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string",
@@ -2200,12 +2200,12 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 197,
+                        "id": 221,
                         "name": "ElementaryTypeName",
                         "src": "569:6:2"
                       }
                     ],
-                    "id": 198,
+                    "id": 222,
                     "name": "VariableDeclaration",
                     "src": "569:16:2"
                   },
@@ -2215,7 +2215,7 @@
                       "indexed": false,
                       "mutability": "mutable",
                       "name": "userAddress",
-                      "scope": 204,
+                      "scope": 228,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2228,12 +2228,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 199,
+                        "id": 223,
                         "name": "ElementaryTypeName",
                         "src": "595:7:2"
                       }
                     ],
-                    "id": 200,
+                    "id": 224,
                     "name": "VariableDeclaration",
                     "src": "595:19:2"
                   },
@@ -2243,7 +2243,7 @@
                       "indexed": false,
                       "mutability": "mutable",
                       "name": "lastLoginTimestamp",
-                      "scope": 204,
+                      "scope": 228,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string",
@@ -2255,22 +2255,22 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 201,
+                        "id": 225,
                         "name": "ElementaryTypeName",
                         "src": "624:6:2"
                       }
                     ],
-                    "id": 202,
+                    "id": 226,
                     "name": "VariableDeclaration",
                     "src": "624:25:2"
                   }
                 ],
-                "id": 203,
+                "id": 227,
                 "name": "ParameterList",
                 "src": "559:96:2"
               }
             ],
-            "id": 204,
+            "id": 228,
             "name": "EventDefinition",
             "src": "539:117:2"
           },
@@ -2284,7 +2284,7 @@
                 null
               ],
               "name": "createHistory",
-              "scope": 289,
+              "scope": 313,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -2297,7 +2297,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "sessionId",
-                      "scope": 242,
+                      "scope": 266,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2309,12 +2309,12 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 205,
+                        "id": 229,
                         "name": "ElementaryTypeName",
                         "src": "685:6:2"
                       }
                     ],
-                    "id": 206,
+                    "id": 230,
                     "name": "VariableDeclaration",
                     "src": "685:23:2"
                   },
@@ -2323,7 +2323,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "userAddress",
-                      "scope": 242,
+                      "scope": 266,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2336,12 +2336,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 207,
+                        "id": 231,
                         "name": "ElementaryTypeName",
                         "src": "710:7:2"
                       }
                     ],
-                    "id": 208,
+                    "id": 232,
                     "name": "VariableDeclaration",
                     "src": "710:19:2"
                   },
@@ -2350,7 +2350,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "firstTimestamp",
-                      "scope": 242,
+                      "scope": 266,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2362,17 +2362,17 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 209,
+                        "id": 233,
                         "name": "ElementaryTypeName",
                         "src": "731:6:2"
                       }
                     ],
-                    "id": 210,
+                    "id": 234,
                     "name": "VariableDeclaration",
                     "src": "731:28:2"
                   }
                 ],
-                "id": 211,
+                "id": 235,
                 "name": "ParameterList",
                 "src": "684:76:2"
               },
@@ -2383,7 +2383,7 @@
                   ]
                 },
                 "children": [],
-                "id": 212,
+                "id": 236,
                 "name": "ParameterList",
                 "src": "768:0:2"
               },
@@ -2407,21 +2407,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 180,
+                              "referencedDeclaration": 204,
                               "type": "uint256",
                               "value": "userCount"
                             },
-                            "id": 213,
+                            "id": 237,
                             "name": "Identifier",
                             "src": "778:9:2"
                           }
                         ],
-                        "id": 214,
+                        "id": 238,
                         "name": "UnaryOperation",
                         "src": "778:11:2"
                       }
                     ],
-                    "id": 215,
+                    "id": 239,
                     "name": "ExpressionStatement",
                     "src": "778:11:2"
                   },
@@ -2451,11 +2451,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 188,
+                                  "referencedDeclaration": 212,
                                   "type": "mapping(string memory => struct UserHistory.UserSessionHistory storage ref)",
                                   "value": "historyList"
                                 },
-                                "id": 216,
+                                "id": 240,
                                 "name": "Identifier",
                                 "src": "799:11:2"
                               },
@@ -2464,16 +2464,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 206,
+                                  "referencedDeclaration": 230,
                                   "type": "string memory",
                                   "value": "sessionId"
                                 },
-                                "id": 217,
+                                "id": 241,
                                 "name": "Identifier",
                                 "src": "811:9:2"
                               }
                             ],
-                            "id": 218,
+                            "id": 242,
                             "name": "IndexAccess",
                             "src": "799:22:2"
                           },
@@ -2523,11 +2523,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 177,
+                                  "referencedDeclaration": 201,
                                   "type": "type(struct UserHistory.UserSessionHistory storage pointer)",
                                   "value": "UserSessionHistory"
                                 },
-                                "id": 219,
+                                "id": 243,
                                 "name": "Identifier",
                                 "src": "824:18:2"
                               },
@@ -2536,11 +2536,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 180,
+                                  "referencedDeclaration": 204,
                                   "type": "uint256",
                                   "value": "userCount"
                                 },
-                                "id": 220,
+                                "id": 244,
                                 "name": "Identifier",
                                 "src": "843:9:2"
                               },
@@ -2549,11 +2549,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 206,
+                                  "referencedDeclaration": 230,
                                   "type": "string memory",
                                   "value": "sessionId"
                                 },
-                                "id": 221,
+                                "id": 245,
                                 "name": "Identifier",
                                 "src": "854:9:2"
                               },
@@ -2562,11 +2562,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 208,
+                                  "referencedDeclaration": 232,
                                   "type": "address",
                                   "value": "userAddress"
                                 },
-                                "id": 222,
+                                "id": 246,
                                 "name": "Identifier",
                                 "src": "865:11:2"
                               },
@@ -2581,7 +2581,7 @@
                                   "type": "int_const 1",
                                   "value": "1"
                                 },
-                                "id": 223,
+                                "id": 247,
                                 "name": "Literal",
                                 "src": "878:1:2"
                               },
@@ -2590,11 +2590,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 210,
+                                  "referencedDeclaration": 234,
                                   "type": "string memory",
                                   "value": "firstTimestamp"
                                 },
-                                "id": 224,
+                                "id": 248,
                                 "name": "Identifier",
                                 "src": "881:14:2"
                               },
@@ -2603,26 +2603,26 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 210,
+                                  "referencedDeclaration": 234,
                                   "type": "string memory",
                                   "value": "firstTimestamp"
                                 },
-                                "id": 225,
+                                "id": 249,
                                 "name": "Identifier",
                                 "src": "897:14:2"
                               }
                             ],
-                            "id": 226,
+                            "id": 250,
                             "name": "FunctionCall",
                             "src": "824:88:2"
                           }
                         ],
-                        "id": 227,
+                        "id": 251,
                         "name": "Assignment",
                         "src": "799:113:2"
                       }
                     ],
-                    "id": 228,
+                    "id": 252,
                     "name": "ExpressionStatement",
                     "src": "799:113:2"
                   },
@@ -2652,11 +2652,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 184,
+                                  "referencedDeclaration": 208,
                                   "type": "mapping(uint256 => string storage ref)",
                                   "value": "idSidTable"
                                 },
-                                "id": 229,
+                                "id": 253,
                                 "name": "Identifier",
                                 "src": "923:10:2"
                               },
@@ -2665,16 +2665,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 180,
+                                  "referencedDeclaration": 204,
                                   "type": "uint256",
                                   "value": "userCount"
                                 },
-                                "id": 230,
+                                "id": 254,
                                 "name": "Identifier",
                                 "src": "934:9:2"
                               }
                             ],
-                            "id": 231,
+                            "id": 255,
                             "name": "IndexAccess",
                             "src": "923:21:2"
                           },
@@ -2683,21 +2683,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 206,
+                              "referencedDeclaration": 230,
                               "type": "string memory",
                               "value": "sessionId"
                             },
-                            "id": 232,
+                            "id": 256,
                             "name": "Identifier",
                             "src": "947:9:2"
                           }
                         ],
-                        "id": 233,
+                        "id": 257,
                         "name": "Assignment",
                         "src": "923:33:2"
                       }
                     ],
-                    "id": 234,
+                    "id": 258,
                     "name": "ExpressionStatement",
                     "src": "923:33:2"
                   },
@@ -2737,11 +2737,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 196,
+                              "referencedDeclaration": 220,
                               "type": "function (string memory,address,string memory)",
                               "value": "historyCreated"
                             },
-                            "id": 235,
+                            "id": 259,
                             "name": "Identifier",
                             "src": "971:14:2"
                           },
@@ -2750,11 +2750,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 206,
+                              "referencedDeclaration": 230,
                               "type": "string memory",
                               "value": "sessionId"
                             },
-                            "id": 236,
+                            "id": 260,
                             "name": "Identifier",
                             "src": "986:9:2"
                           },
@@ -2763,11 +2763,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 208,
+                              "referencedDeclaration": 232,
                               "type": "address",
                               "value": "userAddress"
                             },
-                            "id": 237,
+                            "id": 261,
                             "name": "Identifier",
                             "src": "997:11:2"
                           },
@@ -2776,31 +2776,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 210,
+                              "referencedDeclaration": 234,
                               "type": "string memory",
                               "value": "firstTimestamp"
                             },
-                            "id": 238,
+                            "id": 262,
                             "name": "Identifier",
                             "src": "1010:14:2"
                           }
                         ],
-                        "id": 239,
+                        "id": 263,
                         "name": "FunctionCall",
                         "src": "971:54:2"
                       }
                     ],
-                    "id": 240,
+                    "id": 264,
                     "name": "EmitStatement",
                     "src": "966:59:2"
                   }
                 ],
-                "id": 241,
+                "id": 265,
                 "name": "Block",
                 "src": "768:264:2"
               }
             ],
-            "id": 242,
+            "id": 266,
             "name": "FunctionDefinition",
             "src": "662:370:2"
           },
@@ -2814,7 +2814,7 @@
                 null
               ],
               "name": "updateHistory",
-              "scope": 289,
+              "scope": 313,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -2827,7 +2827,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "sessionId",
-                      "scope": 288,
+                      "scope": 312,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2839,12 +2839,12 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 243,
+                        "id": 267,
                         "name": "ElementaryTypeName",
                         "src": "1061:6:2"
                       }
                     ],
-                    "id": 244,
+                    "id": 268,
                     "name": "VariableDeclaration",
                     "src": "1061:23:2"
                   },
@@ -2853,7 +2853,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "userAddress",
-                      "scope": 288,
+                      "scope": 312,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2866,12 +2866,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 245,
+                        "id": 269,
                         "name": "ElementaryTypeName",
                         "src": "1086:7:2"
                       }
                     ],
-                    "id": 246,
+                    "id": 270,
                     "name": "VariableDeclaration",
                     "src": "1086:19:2"
                   },
@@ -2880,7 +2880,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "timestamp",
-                      "scope": 288,
+                      "scope": 312,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2892,17 +2892,17 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 247,
+                        "id": 271,
                         "name": "ElementaryTypeName",
                         "src": "1107:6:2"
                       }
                     ],
-                    "id": 248,
+                    "id": 272,
                     "name": "VariableDeclaration",
                     "src": "1107:23:2"
                   }
                 ],
-                "id": 249,
+                "id": 273,
                 "name": "ParameterList",
                 "src": "1060:71:2"
               },
@@ -2913,7 +2913,7 @@
                   ]
                 },
                 "children": [],
-                "id": 250,
+                "id": 274,
                 "name": "ParameterList",
                 "src": "1139:0:2"
               },
@@ -2922,7 +2922,7 @@
                   {
                     "attributes": {
                       "assignments": [
-                        252
+                        276
                       ]
                     },
                     "children": [
@@ -2931,7 +2931,7 @@
                           "constant": false,
                           "mutability": "mutable",
                           "name": "_history",
-                          "scope": 287,
+                          "scope": 311,
                           "stateVariable": false,
                           "storageLocation": "memory",
                           "type": "struct UserHistory.UserSessionHistory",
@@ -2941,15 +2941,15 @@
                           {
                             "attributes": {
                               "name": "UserSessionHistory",
-                              "referencedDeclaration": 177,
+                              "referencedDeclaration": 201,
                               "type": "struct UserHistory.UserSessionHistory"
                             },
-                            "id": 251,
+                            "id": 275,
                             "name": "UserDefinedTypeName",
                             "src": "1149:18:2"
                           }
                         ],
-                        "id": 252,
+                        "id": 276,
                         "name": "VariableDeclaration",
                         "src": "1149:34:2"
                       },
@@ -2967,11 +2967,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 188,
+                              "referencedDeclaration": 212,
                               "type": "mapping(string memory => struct UserHistory.UserSessionHistory storage ref)",
                               "value": "historyList"
                             },
-                            "id": 253,
+                            "id": 277,
                             "name": "Identifier",
                             "src": "1186:11:2"
                           },
@@ -2980,21 +2980,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 244,
+                              "referencedDeclaration": 268,
                               "type": "string memory",
                               "value": "sessionId"
                             },
-                            "id": 254,
+                            "id": 278,
                             "name": "Identifier",
                             "src": "1198:9:2"
                           }
                         ],
-                        "id": 255,
+                        "id": 279,
                         "name": "IndexAccess",
                         "src": "1186:22:2"
                       }
                     ],
-                    "id": 256,
+                    "id": 280,
                     "name": "VariableDeclarationStatement",
                     "src": "1149:59:2"
                   },
@@ -3017,7 +3017,7 @@
                               "isPure": false,
                               "lValueRequested": true,
                               "member_name": "userAddress",
-                              "referencedDeclaration": 170,
+                              "referencedDeclaration": 194,
                               "type": "address"
                             },
                             "children": [
@@ -3026,16 +3026,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 252,
+                                  "referencedDeclaration": 276,
                                   "type": "struct UserHistory.UserSessionHistory memory",
                                   "value": "_history"
                                 },
-                                "id": 257,
+                                "id": 281,
                                 "name": "Identifier",
                                 "src": "1219:8:2"
                               }
                             ],
-                            "id": 259,
+                            "id": 283,
                             "name": "MemberAccess",
                             "src": "1219:20:2"
                           },
@@ -3044,21 +3044,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 246,
+                              "referencedDeclaration": 270,
                               "type": "address",
                               "value": "userAddress"
                             },
-                            "id": 260,
+                            "id": 284,
                             "name": "Identifier",
                             "src": "1242:11:2"
                           }
                         ],
-                        "id": 261,
+                        "id": 285,
                         "name": "Assignment",
                         "src": "1219:34:2"
                       }
                     ],
-                    "id": 262,
+                    "id": 286,
                     "name": "ExpressionStatement",
                     "src": "1219:34:2"
                   },
@@ -3081,7 +3081,7 @@
                               "isPure": false,
                               "lValueRequested": true,
                               "member_name": "lastLoginTimestamp",
-                              "referencedDeclaration": 176,
+                              "referencedDeclaration": 200,
                               "type": "string memory"
                             },
                             "children": [
@@ -3090,16 +3090,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 252,
+                                  "referencedDeclaration": 276,
                                   "type": "struct UserHistory.UserSessionHistory memory",
                                   "value": "_history"
                                 },
-                                "id": 263,
+                                "id": 287,
                                 "name": "Identifier",
                                 "src": "1263:8:2"
                               }
                             ],
-                            "id": 265,
+                            "id": 289,
                             "name": "MemberAccess",
                             "src": "1263:27:2"
                           },
@@ -3108,21 +3108,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 248,
+                              "referencedDeclaration": 272,
                               "type": "string memory",
                               "value": "timestamp"
                             },
-                            "id": 266,
+                            "id": 290,
                             "name": "Identifier",
                             "src": "1293:9:2"
                           }
                         ],
-                        "id": 267,
+                        "id": 291,
                         "name": "Assignment",
                         "src": "1263:39:2"
                       }
                     ],
-                    "id": 268,
+                    "id": 292,
                     "name": "ExpressionStatement",
                     "src": "1263:39:2"
                   },
@@ -3146,7 +3146,7 @@
                               "isPure": false,
                               "lValueRequested": true,
                               "member_name": "visitCount",
-                              "referencedDeclaration": 172,
+                              "referencedDeclaration": 196,
                               "type": "uint256"
                             },
                             "children": [
@@ -3155,26 +3155,26 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 252,
+                                  "referencedDeclaration": 276,
                                   "type": "struct UserHistory.UserSessionHistory memory",
                                   "value": "_history"
                                 },
-                                "id": 269,
+                                "id": 293,
                                 "name": "Identifier",
                                 "src": "1312:8:2"
                               }
                             ],
-                            "id": 271,
+                            "id": 295,
                             "name": "MemberAccess",
                             "src": "1312:19:2"
                           }
                         ],
-                        "id": 272,
+                        "id": 296,
                         "name": "UnaryOperation",
                         "src": "1312:21:2"
                       }
                     ],
-                    "id": 273,
+                    "id": 297,
                     "name": "ExpressionStatement",
                     "src": "1312:21:2"
                   },
@@ -3204,11 +3204,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 188,
+                                  "referencedDeclaration": 212,
                                   "type": "mapping(string memory => struct UserHistory.UserSessionHistory storage ref)",
                                   "value": "historyList"
                                 },
-                                "id": 274,
+                                "id": 298,
                                 "name": "Identifier",
                                 "src": "1344:11:2"
                               },
@@ -3217,16 +3217,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 244,
+                                  "referencedDeclaration": 268,
                                   "type": "string memory",
                                   "value": "sessionId"
                                 },
-                                "id": 275,
+                                "id": 299,
                                 "name": "Identifier",
                                 "src": "1356:9:2"
                               }
                             ],
-                            "id": 276,
+                            "id": 300,
                             "name": "IndexAccess",
                             "src": "1344:22:2"
                           },
@@ -3235,21 +3235,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 252,
+                              "referencedDeclaration": 276,
                               "type": "struct UserHistory.UserSessionHistory memory",
                               "value": "_history"
                             },
-                            "id": 277,
+                            "id": 301,
                             "name": "Identifier",
                             "src": "1369:8:2"
                           }
                         ],
-                        "id": 278,
+                        "id": 302,
                         "name": "Assignment",
                         "src": "1344:33:2"
                       }
                     ],
-                    "id": 279,
+                    "id": 303,
                     "name": "ExpressionStatement",
                     "src": "1344:33:2"
                   },
@@ -3289,11 +3289,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 204,
+                              "referencedDeclaration": 228,
                               "type": "function (string memory,address,string memory)",
                               "value": "historyUpdated"
                             },
-                            "id": 280,
+                            "id": 304,
                             "name": "Identifier",
                             "src": "1393:14:2"
                           },
@@ -3302,11 +3302,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 244,
+                              "referencedDeclaration": 268,
                               "type": "string memory",
                               "value": "sessionId"
                             },
-                            "id": 281,
+                            "id": 305,
                             "name": "Identifier",
                             "src": "1408:9:2"
                           },
@@ -3317,7 +3317,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "userAddress",
-                              "referencedDeclaration": 170,
+                              "referencedDeclaration": 194,
                               "type": "address"
                             },
                             "children": [
@@ -3326,16 +3326,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 252,
+                                  "referencedDeclaration": 276,
                                   "type": "struct UserHistory.UserSessionHistory memory",
                                   "value": "_history"
                                 },
-                                "id": 282,
+                                "id": 306,
                                 "name": "Identifier",
                                 "src": "1419:8:2"
                               }
                             ],
-                            "id": 283,
+                            "id": 307,
                             "name": "MemberAccess",
                             "src": "1419:20:2"
                           },
@@ -3344,41 +3344,41 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 248,
+                              "referencedDeclaration": 272,
                               "type": "string memory",
                               "value": "timestamp"
                             },
-                            "id": 284,
+                            "id": 308,
                             "name": "Identifier",
                             "src": "1441:9:2"
                           }
                         ],
-                        "id": 285,
+                        "id": 309,
                         "name": "FunctionCall",
                         "src": "1393:58:2"
                       }
                     ],
-                    "id": 286,
+                    "id": 310,
                     "name": "EmitStatement",
                     "src": "1388:63:2"
                   }
                 ],
-                "id": 287,
+                "id": 311,
                 "name": "Block",
                 "src": "1139:319:2"
               }
             ],
-            "id": 288,
+            "id": 312,
             "name": "FunctionDefinition",
             "src": "1038:420:2"
           }
         ],
-        "id": 289,
+        "id": 313,
         "name": "ContractDefinition",
         "src": "25:1435:2"
       }
     ],
-    "id": 290,
+    "id": 314,
     "name": "SourceUnit",
     "src": "0:1461:2"
   },
@@ -3387,27 +3387,15 @@
     "version": "0.7.6+commit.7338295f.Emscripten.clang"
   },
   "networks": {
-    "1685279260059": {
-      "events": {},
-      "links": {},
-      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
-      "transactionHash": "0xee3511fff3f39739b781bf9a5d50a72514a868c9bae53b23fe6bd1309b1693be"
-    },
-    "1685280224514": {
-      "events": {},
-      "links": {},
-      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
-      "transactionHash": "0xee3511fff3f39739b781bf9a5d50a72514a868c9bae53b23fe6bd1309b1693be"
-    },
     "1685280827762": {
       "events": {},
       "links": {},
-      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
-      "transactionHash": "0xee3511fff3f39739b781bf9a5d50a72514a868c9bae53b23fe6bd1309b1693be"
+      "address": "0xdAA71FBBA28C946258DD3d5FcC9001401f72270F",
+      "transactionHash": "0x0c4b97afba8c97075b6abc24246102861388e21336095936c3f19d0438dbb37f"
     }
   },
   "schemaVersion": "3.4.14",
-  "updatedAt": "2023-05-28T13:36:05.887Z",
+  "updatedAt": "2023-05-29T02:36:47.721Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
