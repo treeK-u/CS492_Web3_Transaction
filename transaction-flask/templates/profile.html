@@ -42,7 +42,6 @@
                     <th>id</th>
                     <th>Name</th>
                     <th>Price</th>
-                    <th>Is Sold</th>
                     <th>Seller Address</th>
                     <th>Url</th>
                 </tr>
@@ -161,8 +160,6 @@
                 $('#example').DataTable({
                     data: data,
                     columns: [
-                        // {data: 'hash'},
-                        // {data: 'type'},
                         {data: 'nonce'},
                         {data: 'blockHash'},
                         {data: 'blockNumber'},
@@ -173,7 +170,6 @@
                         {data: 'value'},
                         {data: 'gas'},
                         {data: 'gasPrice'},
-                        // {data: 'input'}
                     ],
                     scrollX: true,
                     order: [[0, 'desc']],
