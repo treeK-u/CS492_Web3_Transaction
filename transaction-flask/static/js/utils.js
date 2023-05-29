@@ -10,6 +10,7 @@ async function getAccount() {
 }
 
 async function sendETH(price, from, to) {
+    let result = false;
     try {
         let web3 = new Web3();
 
@@ -27,11 +28,12 @@ async function sendETH(price, from, to) {
         });
 
         console.log('트랜잭션 해시:', txHash);
-        alert("성공!");
+        result = true;
     } catch (error) {
         console.error('오류 발생:', error);
         alert("실패!");
     }
+    return result;
 }
 
 async function createCommodity() {
